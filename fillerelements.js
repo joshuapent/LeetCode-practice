@@ -13,5 +13,13 @@
  * @return {number[]}
  */
 var filter = function(arr, fn) {
-    
+  let filteredArr = []
+  let num = 0;
+  for(let i = 0; i < arr.length; i++) {
+      if(fn(arr[i], i)) {
+          filteredArr[num] = arr[i]
+          num++;
+      }
+  }
+  return filteredArr
 };
